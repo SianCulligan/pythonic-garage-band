@@ -12,26 +12,6 @@
 # MUSICIAN instance should have a get_instrument method that returns string.
 # Each kind of Musician instance should have a play_solo method that returns string.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 from pythonic_garage_band import __version__
 
 
