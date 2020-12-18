@@ -1,3 +1,37 @@
+# MUSICIAN - Make use of a Musician base class to handle common functionality which particular kinds of musicians will inherit.
+
+
+###########Band Tests
+# BAND instance should have a name attribute which is a string.
+# BAND instance should have a members attribute which is a list of instances that inherit from Musician base (or super) class.
+# BAND instance should have a play_solos method that asks each member musician to play a solo, in the order they were added to band.
+#BAND instance should have appropriate __str__ and __repr__ methods.
+#BAND Band should have a class method to_list which returns a list of previously created Band instances
+
+# MUSICIAN Each kind of Musician instance should have appropriate __str__ and __repr__ methods.
+# MUSICIAN instance should have a get_instrument method that returns string.
+# Each kind of Musician instance should have a play_solo method that returns string.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 from pythonic_garage_band import __version__
 
 
@@ -97,15 +131,15 @@ def test_band_members(one_band):
 
     assert len(one_band.members) == 3
 
-    # assert isinstance(one_band.members[0], Musician)
+    assert isinstance(one_band.members[0], Musician)
     assert isinstance(one_band.members[0], Guitarist)
     assert one_band.members[0].name == "Kurt Cobain"
 
-    # assert isinstance(one_band.members[1], Musician)
+    assert isinstance(one_band.members[1], Musician)
     assert isinstance(one_band.members[1], Bassist)
     assert one_band.members[1].name == "Krist Novoselic"
 
-    # assert isinstance(one_band.members[2], Musician)
+    assert isinstance(one_band.members[2], Musician)
     assert isinstance(one_band.members[2], Drummer)
     assert one_band.members[2].name == "Dave Grohl"
 
@@ -117,48 +151,48 @@ def test_play_solos_for_whole_band(one_band):
     assert solos[1] == "bom bom buh bom"
     assert solos[2] == "rattle boom crash"
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 def test_to_list():
     assert Band.to_list() == []
     Band("The Nobodies", [])
     assert len(Band.to_list()) == 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 #######################
